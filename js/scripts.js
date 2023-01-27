@@ -18,7 +18,7 @@ Pizza.prototype.price = function () {
   this.price = cost
 };
 
-Pizza.prototype.toppings = function () {
+Pizza.prototype.toppingsFnc = function () {
   topping.forEach(element => {
     i = 0;
     if(!topping[i] === 'no') {
@@ -27,8 +27,13 @@ Pizza.prototype.toppings = function () {
   });
 };
 
-let t1 = document.getElementById("toppings1");
-let t2 = document.getElementById("toppings2");
-let t3 = document.getElementById("toppings3");
-let t4 = document.getElementById("toppings4");
-let topping = [t1[t1.selectedIndex],t2[t2.selectedIndex],t3[t3.selectedIndex],t4[t4.selectedIndex]]
+
+document.getElementById("submit").onclick = function() {
+
+  let t1 = document.getElementById("toppings1");
+  let t2 = document.getElementById("toppings2");
+  let t3 = document.getElementById("toppings3");
+  let t4 = document.getElementById("toppings4");
+  let topping = [t1[t1.selectedIndex],t2[t2.selectedIndex],t3[t3.selectedIndex],t4[t4.selectedIndex]]
+
+}
