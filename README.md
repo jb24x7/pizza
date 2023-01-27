@@ -34,6 +34,12 @@ this.size = '';
 * Expected Output:  
 this.size = 'medium';
 
+### Describe: toppingsFnc()
+* Test: "It should add toppings to object"
+* Code: Pizza.toppingsFnc(['cheese', 'cheese', 'pineapple', 'pineapple']);
+* Expected Output:  
+this.toppings = ['cheese', 'cheese', 'pineapple', 'pineapple'];
+
 ## License
 
 Copyright (c) 2023 James Provance
