@@ -20,13 +20,19 @@ A page that takes a number and generates text based off the number.
 * There are no known bugs at the moment
 
 ## Tests
-### Describe: pizza()
+### Describe: Pizza()
 * Test: "It should generate a pizza object"
-* Code: pizza("p1");
+* Code: Pizza("p1");
 * Expected Output:  
 this.name = p1;
-this.toppings = '';
+this.toppings = [];
 this.size = '';
+
+### Describe: pizzaSize()
+* Test: "It should add pizza size to object"
+* Code: Pizza.pizzaSize('medium');
+* Expected Output:  
+this.size = 'medium';
 
 ## License
 

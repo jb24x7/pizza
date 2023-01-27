@@ -1,6 +1,6 @@
 function Pizza(pizzaName) {
   this.pizza = pizzaName;
-  this.toppings = topping;
+  this.toppings = [];
   this.size = size;
   this.price = 0;
 };
@@ -18,7 +18,7 @@ Pizza.prototype.price = function () {
   this.price = cost
 };
 
-Pizza.prototype.toppingsFnc = function () {
+Pizza.prototype.toppingsFnc = function (topping) {
   topping.forEach(element => {
     i = 0;
     if (!topping[i] === 'no') {
@@ -29,7 +29,7 @@ Pizza.prototype.toppingsFnc = function () {
 
 Pizza.prototype.pizzaSize = function () {
   let size = document.getElementById("size");
-  this.size = size[size.selectedIndex];
+  this.size = size[size.selectedIndex].value;
 };
 
 // function showPizza (pizza) {
@@ -38,12 +38,15 @@ Pizza.prototype.pizzaSize = function () {
 // }
 
 document.getElementById("submit").onclick = function () {
-  let player1 = new Pizza("pizza 1");
   let t1 = document.getElementById("toppings1");
   let t2 = document.getElementById("toppings2");
   let t3 = document.getElementById("toppings3");
   let t4 = document.getElementById("toppings4");
-  let topping = [t1[t1.selectedIndex], t2[t2.selectedIndex], t3[t3.selectedIndex], t4[t4.selectedIndex]]
+  let topping = [t1[t1.selectedIndex].value, t2[t2.selectedIndex].value, t3[t3.selectedIndex].value, t4[t4.selectedIndex].value]
+  let pizza1 = new Pizza('pizza 1');
 
+  pizza1.toppingsFnc(topping)
+  pizza1.pizzaSize()
+  console.log(pizza1)
 
 }
