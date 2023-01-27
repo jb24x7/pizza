@@ -1,7 +1,7 @@
-function Pizza(pizza) {
-  this.pizza = pizza;
-  this.toppings = [];
-  this.size = '';
+function Pizza(pizzaName) {
+  this.pizza = pizzaName;
+  this.toppings = topping;
+  this.size = size;
   this.price = 0;
 };
 
@@ -21,19 +21,29 @@ Pizza.prototype.price = function () {
 Pizza.prototype.toppingsFnc = function () {
   topping.forEach(element => {
     i = 0;
-    if(!topping[i] === 'no') {
+    if (!topping[i] === 'no') {
       this.toppings.push(topping[i]);
     };
   });
 };
 
+Pizza.prototype.pizzaSize = function () {
+  let size = document.getElementById("size");
+  this.size = size[size.selectedIndex];
+};
 
-document.getElementById("submit").onclick = function() {
+// function showPizza (pizza) {
+//   let p = document.createElement("p");
+//   p.innerText = 
+// }
 
+document.getElementById("submit").onclick = function () {
+  let player1 = new Pizza("pizza 1");
   let t1 = document.getElementById("toppings1");
   let t2 = document.getElementById("toppings2");
   let t3 = document.getElementById("toppings3");
   let t4 = document.getElementById("toppings4");
-  let topping = [t1[t1.selectedIndex],t2[t2.selectedIndex],t3[t3.selectedIndex],t4[t4.selectedIndex]]
+  let topping = [t1[t1.selectedIndex], t2[t2.selectedIndex], t3[t3.selectedIndex], t4[t4.selectedIndex]]
+
 
 }

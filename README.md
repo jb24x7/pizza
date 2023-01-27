@@ -22,7 +22,7 @@ A page that takes a number and generates text based off the number.
 ## Tests
 ### Describe: pizza()
 * Test: "It should generate a pizza object"
-* Code: pizza(p1);
+* Code: pizza("p1");
 * Expected Output:  
 this.name = p1;
 this.toppings = '';
