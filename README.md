@@ -24,7 +24,7 @@ A page that takes a number and generates text based off the number.
 * Test: "It should generate a pizza object"
 * Code: pizza(p1);
 * Expected Output:  
-this.name = name;
+this.name = p1;
 this.toppings = '';
 this.size = '';
 
