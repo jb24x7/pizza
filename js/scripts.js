@@ -19,13 +19,15 @@ Pizza.prototype.price = function () {
 };
 
 Pizza.prototype.toppingsFnc = function (topping) {
-  this.toppings = topping
-  topping.forEach(element => {
-    i = 0;
+let actualTopping = [];
+i = 0
+  topping.forEach(i => {
     if (!topping[i] === 'no') {
+      actualTopping.push(topping[i])
     };
   });
-  console.log(topping)
+  console.log(topping);
+  this.toppings = actualTopping.join(', ');
 };
 
 Pizza.prototype.pizzaSize = function () {
