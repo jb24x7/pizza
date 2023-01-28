@@ -1,4 +1,4 @@
-# Neighborhood
+# Pizza
 
 By James Provance
 
@@ -8,12 +8,16 @@ By James Provance
 * JavaScript
 
 ## Description
-A page that takes a number and generates text based off the number.
+A page that lets input what type of pizza yuo would like to order.
 
 ## Setup
-* Open https://jb24x7.github.io/neighborhood/ in your browser.
-* Imput number in form
-* Submit form
+* Open https://jb24x7.github.io/pizza/ in your browser.
+* Fill out you order
+* Submit
+* Enjoy
+* OR
+* Clone this repository
+* Launch index.html
 * Enjoy
 
 ## Known Bugs
@@ -41,5 +45,24 @@ this.size = 'medium';
 this.toppings = ['cheese', 'cheese', 'pineapple', 'pineapple'];
 
 ## License
+MIT License
 
 Copyright (c) 2023 James Provance
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
