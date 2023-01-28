@@ -18,15 +18,17 @@ Pizza.prototype.price = function () {
   this.price = cost
 };
 
-Pizza.prototype.toppingsFnc = function (topping) {
-let actualTopping = [];
-  topping.forEach(i => {
-    if (!topping[i] === 'no') {
-      actualTopping.push(topping[i])
+Pizza.prototype.toppingsFnc = function (toppings) {
+let actualToppings = [];
+  toppings.forEach(topping => {
+    console.log(topping)
+    if (topping !== 'no') {
+      actualToppings.push(topping)
     };
   });
-  console.log(topping);
-  this.toppings = actualTopping.join(', ');
+  console.log(toppings);
+  console.log(actualToppings)
+  this.toppings = actualToppings.join(', ');
 };
 
 Pizza.prototype.pizzaSize = function () {
@@ -44,10 +46,10 @@ document.getElementById("submit").onclick = function () {
   let t2 = document.getElementById("toppings2");
   let t3 = document.getElementById("toppings3");
   let t4 = document.getElementById("toppings4");
-  let topping = [t1[t1.selectedIndex].value, t2[t2.selectedIndex].value, t3[t3.selectedIndex].value, t4[t4.selectedIndex].value]
+  let toppings = [t1[t1.selectedIndex].value, t2[t2.selectedIndex].value, t3[t3.selectedIndex].value, t4[t4.selectedIndex].value]
   let pizza1 = new Pizza('pizza 1');
 
-  pizza1.toppingsFnc(topping)
+  pizza1.toppingsFnc(toppings)
   pizza1.pizzaSize()
   console.log(pizza1)
 
