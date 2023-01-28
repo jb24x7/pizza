@@ -20,7 +20,6 @@ Pizza.prototype.price = function () {
 
 Pizza.prototype.toppingsFnc = function (topping) {
 let actualTopping = [];
-i = 0
   topping.forEach(i => {
     if (!topping[i] === 'no') {
       actualTopping.push(topping[i])
