@@ -1,8 +1,8 @@
 function Pizza(pizzaName) {
-  this.pizza = pizzaName;
+  this.pizzaName = pizzaName;
   this.toppings = [];
   this.size = size;
-  this.price = 0;
+  this.pizzaPrice = 0;
 };
 
 
@@ -15,42 +15,41 @@ Pizza.prototype.price = function () {
   } else {
     cost = 12 + (this.toppings.length * 0.5)
   };
-  this.price = cost
+  this.pizzaPrice = cost
 };
 
-Pizza.prototype.toppingsFnc = function (toppings) {
-let actualToppings = [];
-  toppings.forEach(topping => {
-    console.log(topping)
+Pizza.prototype.toppingsFnc = function (selectedToppings) {
+  selectedToppings.forEach(topping => {
     if (topping !== 'no') {
-      actualToppings.push(topping)
+      this.toppings.push(topping);
     };
   });
-  console.log(toppings);
-  console.log(actualToppings)
-  this.toppings = actualToppings.join(', ');
 };
 
 Pizza.prototype.pizzaSize = function () {
-  let size = document.getElementById("size");
-  this.size = size[size.selectedIndex].value;
+  if (size[size.selectedIndex].value !== 'no') {
+    this.size = size[size.selectedIndex].value;
+  };
 };
 
-// function showPizza (pizza) {
-//   let p = document.createElement("p");
-//   p.innerText = 
-// }
+function showPizza (pizza) {
+  let p = document.getElementById("what-pizza")
+  p.innerText = pizza.pizzaName + ' ' + pizza.toppings.join(', ') + ' ' + pizza.size + ' ' + pizza.pizzaPrice
+}
 
 document.getElementById("submit").onclick = function () {
   let t1 = document.getElementById("toppings1");
   let t2 = document.getElementById("toppings2");
   let t3 = document.getElementById("toppings3");
   let t4 = document.getElementById("toppings4");
+  let size = document.getElementById("size");
   let toppings = [t1[t1.selectedIndex].value, t2[t2.selectedIndex].value, t3[t3.selectedIndex].value, t4[t4.selectedIndex].value]
   let pizza1 = new Pizza('pizza 1');
 
   pizza1.toppingsFnc(toppings)
-  pizza1.pizzaSize()
+  pizza1.pizzaSize(size)
+  pizza1.price()
   console.log(pizza1)
+  showPizza(pizza1)
 
 }
