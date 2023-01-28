@@ -32,9 +32,8 @@ Pizza.prototype.pizzaSize = function () {
   };
 };
 
-function showPizza (pizza) {
-  let p = document.getElementById("what-pizza")
-  p.innerText = pizza.pizzaName + ' ' + pizza.toppings.join(', ') + ' ' + pizza.size + ' ' + pizza.pizzaPrice
+function showPizza (pizza, p) {
+  p.innerText = pizza.size + ' ' + pizza.toppings.join(', ') + ' ' + pizza.pizzaPrice
 }
 
 document.getElementById("submit").onclick = function () {
@@ -43,6 +42,7 @@ document.getElementById("submit").onclick = function () {
   let t3 = document.getElementById("toppings3");
   let t4 = document.getElementById("toppings4");
   let size = document.getElementById("size");
+  let p = document.getElementById("what-pizza")
   let toppings = [t1[t1.selectedIndex].value, t2[t2.selectedIndex].value, t3[t3.selectedIndex].value, t4[t4.selectedIndex].value]
   let pizza1 = new Pizza('pizza 1');
 
@@ -50,6 +50,6 @@ document.getElementById("submit").onclick = function () {
   pizza1.pizzaSize(size)
   pizza1.price()
   console.log(pizza1)
-  showPizza(pizza1)
+  showPizza(pizza1, p)
 
 }
